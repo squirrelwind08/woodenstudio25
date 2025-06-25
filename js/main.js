@@ -85,3 +85,39 @@ mm.add("(max-width: 599px)",() => {
     )
 
 })
+
+gsap.fromTo(
+        ".concept-second .column-left",
+        1,
+        {
+            x: -100,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".concept-second .column-left",
+                start: "top center",
+                markers: false
+            }
+        }
+    )
+    
+    gsap.fromTo(
+        ".concept-second .column-right",
+        1,
+        {
+            x: 100,
+            opacity: 0
+        },
+        {
+            x: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".concept-second .column-right",
+                start: "center center",
+                markers: false
+            }
+        }
+    )
