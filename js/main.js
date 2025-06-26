@@ -121,3 +121,21 @@ gsap.fromTo(
             }
         }
     )
+
+     gsap.fromTo(
+        ".concept-second .column-left",
+        1,
+        {
+            y: 50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".concept-second .column-left",
+                start: "top center",
+                markers: false
+            }
+        }
+    )

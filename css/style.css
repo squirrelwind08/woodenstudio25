@@ -242,6 +242,7 @@ li {
 @media screen and (max-width: 599px) {
   .concept-first {
     display: block;
+    margin-bottom: 48px;
   }
 }
 .concept-first .column-left {
@@ -250,6 +251,11 @@ li {
 @media screen and (max-width: 599px) {
   .concept-first .column-left {
     width: 100%;
+  }
+}
+@media screen and (max-width: 599px) {
+  .concept-first .concept-content {
+    margin-bottom: 24px;
   }
 }
 .concept-first .column-right {
@@ -299,8 +305,18 @@ li {
   -moz-column-gap: 16px;
        column-gap: 16px;
 }
+@media screen and (max-width: 599px) {
+  .concept-second {
+    flex-flow: column-reverse;
+  }
+}
 .concept-second .column-left {
   width: 50%;
+}
+@media screen and (max-width: 599px) {
+  .concept-second .column-left {
+    width: 100%;
+  }
 }
 .concept-second .column-left__photo {
   width: 100%;
@@ -309,10 +325,27 @@ li {
   width: 50%;
   padding-left: 91px;
 }
+@media screen and (max-width: 599px) {
+  .concept-second .column-right {
+    width: 100%;
+    padding: 0;
+  }
+}
+@media screen and (max-width: 599px) {
+  .concept-second .concept-content {
+    margin-bottom: 48px;
+  }
+}
 .concept-content__head {
   margin-bottom: 24px;
   font-size: 24px;
   font-weight: 600;
+}
+@media screen and (max-width: 599px) {
+  .concept-content__head {
+    margin-bottom: 16px;
+    font-size: 20px;
+  }
 }
 .concept-content__text {
   line-height: 1.75;
