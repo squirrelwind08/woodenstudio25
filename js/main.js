@@ -139,3 +139,41 @@ gsap.fromTo(
             }
         }
     )
+
+
+    gsap.fromTo(
+        ".works-items .works-item",
+        1,
+        {
+            opacity: 0
+        },
+        {
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".works-items",
+                start: "top center",
+                markers: false
+            },
+            stagger:{each: 0.2}
+        }
+    )
+
+    gsap.fromTo(
+        ".news-items",
+        1,
+        {
+            y: 50,
+            opacity: 0
+        },
+        {
+            y: 0,
+            opacity: 1,
+            scrollTrigger: {
+                trigger: ".news-items",
+                start: "top center",
+                markers: false
+            }
+        }
+    )
+
+    
