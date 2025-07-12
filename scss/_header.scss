@@ -23,17 +23,20 @@
         }
 
 
+    // ───────── ナビゲーション ─────────
     .nav{
         display: flex;
         column-gap: 32px;
-        @include mq(sp){
+        // タブレット以下はハンバーガーで開閉
+        @include mq(tab){
             display: none;
         }
     }
 
+    // ───────── ハンバーガーアイコン ─────────
     .ham{
         display: none;
-        @include mq(sp){
+        @include mq(tab){
             display: block;
             width: 64px;
             height: 64px;
@@ -62,5 +65,27 @@
 
         }
 
+    }
+
+    // ───────── open 状態 (スマホ・タブレット) ─────────
+    &.nav-open{
+        .nav{
+            // sp/tab で表示
+            @include mq(tab){
+                display: flex;
+                flex-flow: column;
+                row-gap: 32px;
+                position: fixed;
+                top: 64px; // ヘッダー高さ
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 64px);
+                background-color: $overlay2;
+                backdrop-filter: blur(4px);
+                align-items: center;
+                justify-content: center;
+                z-index: 0;
+            }
+        }
     }
 }
